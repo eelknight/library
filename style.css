@@ -1,0 +1,37 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.heading{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(39, 153, 191);
+    box-shadow: 0px 10px 10px lightgray;
+    height: 30vh;
+}
+.addBook{
+   margin-top: 10px;
+   display: flex;
+   justify-content: center;
+}
+.form{
+    background-color: #20d0d0;
+}
+#dialog{
+    border-radius: 25px;
+}
+.library{
+    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+.library>div{
+    display: grid;
+    justify-self: center;
+    align-content: center;
+    height: 200px;
+    border: solid 1px black;
+    margin: 10px 10px;
+    padding: 10%;
+
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="library.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+</head>
+<body>
+    <div class="heading">
+    <header><h1>Your Library</h1></header>
+    </div>
+    <div class="addBook">
+    <button class="form" onclick="window.dialog.showModal();">Add Book</button>
+    </div>
+
+    <dialog id="dialog">
+    <form method="dialog">
+        <section>
+            <input class="title" type="text" placeholder="Title">
+            <input class="author" type="text" placeholder="Author">
+            <input class="pages" type="text" placeholder="pages">
+        </section>
+        <section><label>Have you read<select name="read" class="read">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select></label></section>
+        <button class="submitBook">Submit</button>
+    </form>
+    </dialog>
+    <div class="library">
+    </div>
+</body>
+</html>
