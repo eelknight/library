@@ -14,19 +14,24 @@
     <div class="addBook">
     <button class="form" onclick="window.dialog.showModal();">Add Book</button>
     </div>
-
     <dialog id="dialog">
-    <form method="dialog">
-        <section>
-            <input class="title" type="text" placeholder="Title">
-            <input class="author" type="text" placeholder="Author">
-            <input class="pages" type="text" placeholder="pages">
+    <form method="dialog" id="book-form">
+        <span class="close">X</span>
+        <section class="text">
+            <input class="title" type="text" name="book-title" placeholder="Title" required
+            aria-label="required">
+            <input class="author" type="text" name="author-name" placeholder="Author" required
+            aria-label="required">
+            <input class="pages" type="number" name="numberPages" placeholder="pages"
+            aria-label="required" pattern= "[0-9]">
         </section>
         <section><label>Have you read<select name="read" class="read">
-            <option value="Yes">Yes</option>
-            <option value="No">No</option>
+            <option value="Read">Yes</option>
+            <option value="Not read">No</option>
         </select></label></section>
-        <button class="submitBook">Submit</button>
+        <section>
+        <button class="submitBook" form="book-form">Submit</button>
+        </section>
     </form>
     </dialog>
     <div class="library">

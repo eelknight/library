@@ -1,11 +1,23 @@
+@font-face{
+    font-family: montserrat;
+    src: url(Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+*{
+    font-family: montserrat;
+}
+
 body{
     margin: 0;
     padding: 0;
+    background-color: rgba(59, 38, 191, 0.1);
+}
+h1,.library>div{
+    color: rgba(135, 38, 191, 0.6);
 }
 .heading{
     display: flex;
     justify-content: center;
-    background-color: rgb(39, 153, 191);
+    background-color: #2799bf;
     box-shadow: 0px 10px 10px lightgray;
     height: 30vh;
 }
@@ -13,25 +25,44 @@ body{
    margin-top: 10px;
    display: flex;
    justify-content: center;
+  
 }
 .form{
-    background-color: #20d0d0;
+    border-radius: 5px;
+    background-color: rgba(135, 38, 191, 0.1);
+    width: 10%;
 }
 #dialog{
     border-radius: 25px;
+}
+section{
+    margin: 1%;
+}
+.close{
+    float: right;
+    cursor: pointer;
+    transform: translate(0%, -50%);
+    padding: 1%;
+}
+.close:hover{background-color: rgba(59, 38, 191, 0.1);}
+
+[type="text"]{
+    margin-bottom: 10px;
 }
 .library{
     gap: 10px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    margin: 10px 10px;
 }
 .library>div{
+    color: gold;
     display: grid;
     justify-self: center;
-    align-content: center;
-    height: 200px;
-    border: solid 1px black;
-    margin: 10px 10px;
+    align-content: space-between;
+    border-radius: 5px;
+    background-color: rgba(135, 38, 191, 0.7);
+    height: 125px;
     padding: 10%;
-
+    box-shadow: 5px 10px black;
 }
