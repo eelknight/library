@@ -1,13 +1,15 @@
 const myLibrary =[];
 
-function Book(title,author,pages,read) {
-    this.title = title
-    this.author = author
-    this.pages = pages
-    this.read = read
-    this.info = function() {
-      return `${title} by ${author}
-       ${pages} pages`
+class Book {
+  constructor (title,author,pages,read ){
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+  }
+    bookInfo() {
+      return `${this.title} by ${this.author}
+       ${this.pages} pages`
     }
 }
 
@@ -23,9 +25,8 @@ cross.addEventListener("click", dontAddToLibrary);
 addBook.addEventListener("click", addBookToLibrary);
 
 function dontAddToLibrary() {
- const dialog= document.querySelector("#dialog")
- console.log("done")
- dialog.close()
+   const dialog= document.querySelector("#dialog")
+   dialog.close()
 }
 
 function addBookToLibrary() {
@@ -43,7 +44,7 @@ function makeBook(current) {
    div.classList.add(current.title);
   
    myLibrary.forEach(book => {
-   div.textContent= book.info()
+   div.textContent= book.bookInfo()
    });
    buttons(div,current);
 }
